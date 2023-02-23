@@ -9,7 +9,7 @@ import SwiftUI
 
 struct JokeView: View {
     @StateObject var dataService = DataService()
-    @State private var selectedCategory = Joke.JokeType.general
+    @AppStorage("selectedCategory") private var selectedCategory = Joke.JokeType.general
     
     var body: some View {
         NavigationStack {
